@@ -11,7 +11,7 @@ const Home = forwardRef(({ darkMode }, ref) => {
         <div className="title">
           <h2 style={{ color: "orange" }}>INTRODUCTION</h2>
         </div>
-        <h3 className="short-border" style={{ color: darkMode ? "#ded8d3" : 'black' }}>
+        <h3 className="short-border" style={{ color: darkMode ? "#ded8d3" : 'black', borderBottom: darkMode ? "white" : "black" }}>
           FULL-STACK DEVELOPER
         </h3>
 

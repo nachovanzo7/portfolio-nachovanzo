@@ -1,0 +1,31 @@
+.short-border {
+    font-size: 48px;
+    padding-bottom: 20px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .short-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px; /* ancho deseado para la línea */
+    border-bottom: 1px solid white;
+  }
+
+  .text-home {
+    font-size: 38px;
+    padding-top: 20px
+  }
+
+  .title {
+    padding-bottom: 20px;
+    padding-top: 100px;
+  }
+
+  .home-section {
+    padding: 2rem;
+    color: white;
+    padding-left: 60px;
+  }

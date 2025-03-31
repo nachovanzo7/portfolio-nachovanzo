@@ -124,7 +124,7 @@ const Layout = () => {
               homeRef={homeRef}
               aboutRef={aboutRef}
               worksRef={worksRef}
-              technologiesRef={worksRef}
+              technologiesRef={technologiesRef}
             />
           </div>
 

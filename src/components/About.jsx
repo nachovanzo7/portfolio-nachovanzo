@@ -1,29 +1,31 @@
 import React from "react";
-import "./styles/home.css";
 import { FileDown } from 'lucide-react';
 import { forwardRef } from 'react';
+import '../pages/styles/layout.css';
+
 
 const About = forwardRef(({ darkMode }, ref) => {
   return (
     <section style={{ padding: "2rem", color: "white", paddingLeft: "60px" }} ref={ref}>
 
-      <div style={{ paddingBottom: "100px" }}>
+      <div style={{ paddingBottom: "100px" }} className="bio-container">
 
         <div style={{ paddingBottom: "20px", paddingTop: "100px" }}>
           <h2 style={{ color: "orange" }}>ABOUT ME</h2>
         </div>
-        <h3 style={{ color: darkMode ? "#ded8d3" : 'black' }} className="short-border">
+        <h3 style={{ color: darkMode ? "#ded8d3" : 'black'}} className="short-border">
           BIOGRAPHY
         </h3>
 
-        <p style={{ fontSize: "38px", paddingTop: "20px", color: darkMode ? "#c4bcb3" : "black" }}>
+        <p className="about-text" style={{ color: darkMode ? "#c4bcb3" : "black" }}>
           I'm from Uruguay, and I enjoy working with new people because that's how I learn and discover new ways of seeing the world.
         </p>
 
         <div style={{ 
           display: 'flex', 
           marginTop: '20px',
-          gap: '20px'
+          gap: '20px',
+          flexFlow: 'column'
         }}>
 
           <div style={{ 
@@ -44,18 +46,18 @@ const About = forwardRef(({ darkMode }, ref) => {
                   <td style={{ 
                     padding: '10px 0', 
                     color: darkMode ? "#c4bcb3" : '#333'
-                  }}>IGNACIO VANZO</td>
+                  }} className="name">IGNACIO VANZO</td>
                 </tr>
                 <tr style={{ borderBottom: darkMode ? '1px solid white ' : '1px solid black '}}>
                   <td style={{ 
                     padding: '10px 0', 
                     color: darkMode ? "#ded8d3" : 'black',
                     fontWeight: 'bold'
-                  }}>AGE</td>
+                  }} >AGE</td>
                   <td style={{ 
                     padding: '10px 0', 
                     color: darkMode ? "#c4bcb3" : '#333'
-                  }}>21 years</td>
+                  }} className="age">21 years</td>
                 </tr>
                 <tr>
                   <td style={{ 
@@ -66,7 +68,8 @@ const About = forwardRef(({ darkMode }, ref) => {
                   <td style={{ 
                     padding: '10px 0', 
                     color: darkMode ? "#c4bcb3" : '#333'
-                  }}>Montevideo</td>
+                  }}
+                  className="address">Montevideo</td>
                 </tr>
               </tbody>
             </table>
@@ -87,6 +90,7 @@ const About = forwardRef(({ darkMode }, ref) => {
               color: 'inherit',
               cursor: 'pointer'
             }}
+            className="download-cv"
           >
             <div style={{
               display: 'flex',

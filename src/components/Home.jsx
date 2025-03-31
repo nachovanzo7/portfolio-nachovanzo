@@ -6,14 +6,14 @@ import { forwardRef } from 'react';
 
 const Home = forwardRef(({ darkMode }, ref) => {
   return (
-    <section className="home-section" ref={ref} style={{padding: '2rem', paddingLeft: '60px'}}>
+    <section className="home-section" ref={ref} style={{padding: '2rem'}}>
 
       <div>
 
         <div className="title">
           <h2 style={{ color: "orange" }}>INTRODUCTION</h2>
         </div>
-        <h3 className="short-border" style={{ color: darkMode ? "#ded8d3" : 'black', borderBottom: darkMode ? "1px solid white" : "1px solid black"  }}>
+        <h3 className="short-border" style={{ color: darkMode ? "#ded8d3" : 'black'}}>
           FULL-STACK DEVELOPER
         </h3>
 

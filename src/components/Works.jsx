@@ -8,7 +8,6 @@ const Works = forwardRef(({ darkMode }, ref) => {
       style={{ 
         padding: '2rem', 
         color: darkMode ? 'white' : 'black',
-        paddingLeft: '60px',
         backgroundColor: darkMode ? '#1d1b19' : '#fffcf7',
         transition: "all 0.3s ease"
       }} 

@@ -3,8 +3,9 @@ import React from 'react';
 import About from './About.jsx';
 import Home from './Home.jsx';
 import Works from './Works.jsx';
+import Technologies from './Technologies.jsx';
 
-const Body = ({ darkMode, homeRef, aboutRef, worksRef }) => {
+const Body = ({ darkMode, homeRef, aboutRef, worksRef, technologiesRef }) => {
   return (
     <>
       <section ref={homeRef}>
@@ -15,6 +16,9 @@ const Body = ({ darkMode, homeRef, aboutRef, worksRef }) => {
       </section>
       <section ref={worksRef}>
         <Works darkMode={darkMode}/>
+      </section>
+      <section ref={technologiesRef}>
+        <Technologies darkMode={darkMode}/>
       </section>
     </>
   );

@@ -25,6 +25,7 @@ const Layout = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const worksRef = useRef(null);
+  const technologiesRef = useRef(null);
 
   const scrollToRef = (ref) => {
     ref.current?.scrollIntoView({
@@ -123,6 +124,7 @@ const Layout = () => {
               homeRef={homeRef}
               aboutRef={aboutRef}
               worksRef={worksRef}
+              technologiesRef={worksRef}
             />
           </div>
 

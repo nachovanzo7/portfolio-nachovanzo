@@ -6,7 +6,7 @@ import '../pages/styles/layout.css';
 
 const About = forwardRef(({ darkMode }, ref) => {
   return (
-    <section style={{ padding: "2rem", color: "white", paddingLeft: "60px" }} ref={ref}>
+    <section className="bio-section" style={{ padding: "2rem", color: "white"}} ref={ref}>
 
       <div style={{ paddingBottom: "100px" }} className="bio-container">
 

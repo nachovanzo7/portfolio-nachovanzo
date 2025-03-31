@@ -63,7 +63,7 @@ const Layout = () => {
     {
       icon: <Code size={18} color={darkMode ? "#ffff" : "black"} />,
       label: "Technologies",
-      onClick: () => alert("Settings!"),
+      onClick: () => scrollToRef(technologiesRef),
     },
     {
       icon: darkMode ? (

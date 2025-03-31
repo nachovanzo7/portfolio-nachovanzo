@@ -2,7 +2,7 @@ import React from "react";
 import { FileDown } from 'lucide-react';
 import { forwardRef } from 'react';
 import '../pages/styles/layout.css';
-
+import IgnacioVanzoCV from '../assets/IgnacioVanzo-CV.pdf';
 
 const About = forwardRef(({ darkMode }, ref) => {
   return (
@@ -76,7 +76,8 @@ const About = forwardRef(({ darkMode }, ref) => {
           </div>
 
           <a 
-            href="" 
+            href={IgnacioVanzoCV}
+            download="Ignacio Vanzo - CV"
             style={{ 
               flex: '0.5',
               border: '1px solid',
@@ -101,7 +102,7 @@ const About = forwardRef(({ darkMode }, ref) => {
             }}>
               <FileDown color={darkMode ? "#ded8d3" : "black"} />
               <span style={{ color: darkMode ? "#ded8d3" : 'black' }}>
-                Descargar CV
+                Download CV
               </span>
             </div>
           </a>

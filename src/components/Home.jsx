@@ -1,6 +1,12 @@
 import React from "react";
 import '../pages/styles/layout.css';
 import profileImage from '../assets/profile.jpg'
+import linkedin from '../assets/logos-tech/linkedin.svg'
+import linkedin2 from '../assets/logos-tech/linkedinw.svg'
+import github from '../assets/logos-tech/github-b.svg'
+import github2 from '../assets/logos-tech/github-white.svg'
+import gmail from '../assets/logos-tech/gmail.svg'
+import gmailb from '../assets/logos-tech/gmail-b.svg'
 
 import { forwardRef } from 'react';
 
@@ -19,11 +25,12 @@ const Home = forwardRef(({ darkMode }, ref) => {
 
         <div
             style={{
-              backgroundColor: darkMode ? "#1d1b19" : "#fffcf7",
+              backgroundColor: darkMode ? "#1d1b19" : "#fffcf7", 
             }}
+            className="home-image"
           >
             
-            <div className="home-image">
+            <div className="home-image" style={{flexDirection: 'column' }}>
               <img
               className="image"
                 src={profileImage}
@@ -32,15 +39,25 @@ const Home = forwardRef(({ darkMode }, ref) => {
                   width: `200px`,
                   height: `200px`,
                   borderRadius: "10%",
-                  boxShadow: darkMode
-                    ? "0 0 20px rgba(255, 200, 0, 0.3)"
-                    : "0 0 20px rgba(0, 0, 0, 0.1)",
-                  transition: "all 0.3s ease",
                   marginTop: "20px",
                   marginBottom: "20px",
+                  alignSelf: "center",
                 }}
               />
 
+                <div style={{justifySelf: 'center', color: darkMode ? 'white' : 'black', display: 'flex'}}>
+                  <div className="tech-icons" style={{justifySelf: 'center'}}> 
+                  <a href="https://www.linkedin.com/in/ignaciovanzo/" target="_blank" style={{justifySelf:'center'}}>
+                    <img src={ darkMode ? linkedin2 : linkedin} alt="LinkedIn" style={{width: '46px'}}/>
+                    </a>
+                    <a href="https://github.com/nachovanzo7" target="_blank" style={{justifySelf:'center'}}>
+                    <img src={ darkMode ? github2 : github} alt="GitHub" />
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nachovanzo17@gmail.com&su=&body=" target="_blank" style={{justifySelf:'center'}}>
+                    <img src={ darkMode ? gmail : gmailb} alt="GitHub" style={{width: '40px'}}/>
+                    </a>
+                  </div>
+                </div>
             </div>
           </div>
 

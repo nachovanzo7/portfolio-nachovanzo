@@ -139,6 +139,9 @@ const Layout = () => {
           >
             
             <div className="div-image">
+
+            
+
               <img
                 src={profileImage}
                 alt="Profile"

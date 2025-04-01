@@ -8,7 +8,7 @@ const About = forwardRef(({ darkMode }, ref) => {
   return (
     <section className="bio-section" style={{ padding: "2rem", color: "white"}} ref={ref}>
 
-      <div style={{ paddingBottom: "100px" }} className="bio-container">
+      <div  className="bio-container">
 
         <div style={{ paddingBottom: "20px", paddingTop: "100px" }}>
           <h2 style={{ color: "orange" }}>ABOUT ME</h2>

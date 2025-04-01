@@ -27,6 +27,7 @@ const Works = forwardRef(({ darkMode }, ref) => {
         <div className='rcd-proyect'>
           <div className="project-info">
             <h2>RCD Management</h2>
+            <h4>January 2025 - March 2025</h4>
             <p className='rcd-text' style={{ color: darkMode ? "#c4bcb3" : "black" }}>
             Internal management system developed for RCD Reciclaje, designed to ensure process traceability, optimize data collection, and automate monthly reporting.
             </p>

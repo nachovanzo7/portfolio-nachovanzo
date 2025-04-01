@@ -5,7 +5,6 @@
   overflow-x: hidden;
 }
 
-/* Estilos para desktop (se mantienen igual) */
 .section-right {
   position: fixed;
   right: 0;
@@ -39,6 +38,8 @@
   -ms-overflow-style: none;
   transition: margin-right 0.2s ease-out, background-color 0.3s ease;
   overscroll-behavior: contain;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .section-left::-webkit-scrollbar {
@@ -127,14 +128,12 @@
     padding: 1rem 0;
   }
   
-  /* Fila horizontal */
   .tech-row {
     display: flex;
     gap: 1rem;
     min-width: fit-content;
   }
   
-  /* Cada categoría */
   .tech-category {
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
@@ -149,19 +148,7 @@
     color: orange;
   }
   
-  /* Contenedor de íconos */
-  .tech-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-  
-  .tech-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.2s ease;
-  }
+ 
   
   .tech-icons img:hover {
     transform: scale(1.1);
@@ -308,11 +295,16 @@
 
   
 
-  @media (max-width: 768px) {
+  @media (max-width: 1025px) {
     .dock {
       width: 100%;
       border-radius: 0;
       padding: 0 10px;
+    }
+
+    .section-left {
+      padding-left: 0px;
+      padding-right: 0px;
     }
 
     .tech-row {
@@ -352,38 +344,52 @@
     }
     
     .home-image {
-      display: grid;
+      display: flex;
       justify-content: center;
       transition: width 0.3s ease-out, background-color 0.3s ease, border-color 0.3s ease !important;
     }
     .home-image div{
       justify-content: center;
-      flex-direction: column;
       transition: width 0.3s ease-out, background-color 0.3s ease, border-color 0.3s ease !important;
     }
+
     .home-image div a{
       justify-content: center;
-      flex-direction: column;
+      flex-direction: row !important;
       transition: width 0.3s ease-out, background-color 0.3s ease, border-color 0.3s ease !important;
     }
 
     .tech-grid {
-      grid-template-columns: 1fr !important; /* Fuerza una sola columna */
+      grid-template-columns: 1fr !important; 
       gap: 1rem;
       padding: 1rem 0;
     }
     
     .backend, 
-    .frontend, 
-    .env-tools {
-      padding: 1rem;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 100%;
-    }
+  .frontend, 
+  .env-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .backend h4, 
+  .frontend h4, 
+  .env-tools h4 {
+    width: 100%;
+    text-align: center;
+  }
     
     .tech-icons {
-      gap: 0.5rem;
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: center !important;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 0 auto;
+      max-width: 100%;
     }
     
     .tech-icons img {
@@ -533,9 +539,6 @@
       justify-content: center;
     }
 
-  }
-
-  @media (max-width: 1025px) {
     .section-right {
       display: none; 
     }
@@ -553,5 +556,10 @@
 
     .section-left {
       margin-right: 0 !important;
+    }
+
+    .div-icons {
+      display: flex;
+      flex-direction: column !important;
     }
   }

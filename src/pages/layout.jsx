@@ -15,6 +15,7 @@ import "./styles/layout.css";
 import ClickSpark from "../components/ClickSpark";
 import profileImage from "../assets/profile.jpg";
 import { TypeAnimation } from "react-type-animation";
+import SocialMedia from '../components/socialmedia.jsx'
 
 const Layout = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -128,7 +129,6 @@ const Layout = () => {
             />
           </div>
 
-          {/* Sección derecha */}
           <div
             className="section-right"
             style={{
@@ -184,6 +184,9 @@ const Layout = () => {
                 cursor={true}
                 cursorStyle={darkMode ? "|" : "_"}
               />
+
+              <SocialMedia darkMode={darkMode}/>
+
             </div>
           </div>
         </div>

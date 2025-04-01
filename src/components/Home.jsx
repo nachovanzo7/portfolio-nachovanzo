@@ -45,8 +45,8 @@ const Home = forwardRef(({ darkMode }, ref) => {
                 }}
               />
 
-                <div style={{justifySelf: 'center', color: darkMode ? 'white' : 'black', display: 'flex'}}>
-                  <div className="tech-icons" style={{justifySelf: 'center'}}> 
+                <div className='div-icons' style={{justifySelf: 'center', color: darkMode ? 'white' : 'black'}}>
+                  <div className="tech-icons" style={{justifySelf: 'center' }}> 
                   <a href="https://www.linkedin.com/in/ignaciovanzo/" target="_blank" style={{justifySelf:'center'}}>
                     <img src={ darkMode ? linkedin2 : linkedin} alt="LinkedIn" style={{width: '46px'}}/>
                     </a>

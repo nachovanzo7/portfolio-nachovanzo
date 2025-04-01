@@ -57,7 +57,7 @@ const About = forwardRef(({ darkMode }, ref) => {
                   <td style={{ 
                     padding: '10px 0', 
                     color: darkMode ? "#c4bcb3" : '#333'
-                  }} className="age">21 years</td>
+                  }} className="age">21</td>
                 </tr>
                 <tr>
                   <td style={{ 

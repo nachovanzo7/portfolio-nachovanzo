@@ -54,7 +54,7 @@ const Home = forwardRef(({ darkMode }, ref) => {
                     <img src={ darkMode ? github2 : github} alt="GitHub" />
                     </a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nachovanzo17@gmail.com&su=&body=" target="_blank" style={{justifySelf:'center'}}>
-                    <img src={ darkMode ? gmail : gmailb} alt="GitHub" style={{width: '40px'}}/>
+                    <img src={ darkMode ? gmail : gmailb} alt="Gmail" style={{width: '40px', marginLeft: '10px'}}/>
                     </a>
                   </div>
                 </div>

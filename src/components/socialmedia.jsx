@@ -13,7 +13,7 @@ const SocialMedia = (({ darkMode } ) => {
         <div className="tech-icons" style={{display: 'flex', paddingTop: '20px'}}>
             <a href="https://www.linkedin.com/in/ignaciovanzo/" target="_blank"><img src={darkMode ? linkedinw : linkedin} alt="LinkedIn" /></a>
             <a href="https://github.com/nachovanzo7" style={{marginLeft: '20px', marginRight: '20px'}} target="_blank"><img src={darkMode ? githubw : github} alt="GitHub" /></a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nachovanzo17@gmail.com&su=&body=" target="_blank"><img src={darkMode ? gmailw : gmail} alt="Gmail" /></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nachovanzo17@gmail.com&su=&body=" target="_blank" style={{marginLeft: '9px'}}><img src={darkMode ? gmailw : gmail} alt="Gmail" /></a>
         </div>
         </div>
     );

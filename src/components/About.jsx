@@ -3,6 +3,7 @@ import { FileDown } from 'lucide-react';
 import { forwardRef } from 'react';
 import '../pages/styles/layout.css';
 import IgnacioVanzoCV from '../assets/IgnacioVanzo-CV.pdf';
+import { motion } from 'framer-motion';
 
 const About = forwardRef(({ darkMode }, ref) => {
   return (
@@ -75,7 +76,11 @@ const About = forwardRef(({ darkMode }, ref) => {
             </table>
           </div>
 
-          <a 
+          <motion.a 
+            whileHover={{
+              scale: 1.05
+            }
+            }
             href={IgnacioVanzoCV}
             download="Ignacio Vanzo - CV"
             style={{ 
@@ -105,7 +110,7 @@ const About = forwardRef(({ darkMode }, ref) => {
                 Download CV
               </span>
             </div>
-          </a>
+          </motion.a>
 
         </div>
 

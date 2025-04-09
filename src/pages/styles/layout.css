@@ -150,7 +150,9 @@
   
  
   
-
+  .tech-icons img:hover {
+    transform: scale(1.1);
+  }
 
   
   
@@ -167,7 +169,7 @@
     border-top: 8px;
   }
   
-  .backend, .frontend, .env-tools {
+  .backend, .frontend, .environment-tools {
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 12px;
@@ -195,6 +197,9 @@
     transition: transform 0.3s ease;
   }
   
+  .tech-icons img:hover {
+    transform: scale(1.1);
+  }
   
   .dark .backend, 
   .dark .frontend, 

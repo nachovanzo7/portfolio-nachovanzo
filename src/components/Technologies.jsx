@@ -2,27 +2,25 @@ import React, { forwardRef } from "react";
 import { motion } from 'framer-motion';
 import '../pages/styles/layout.css';
 
-// Importaciones de iconos 
-const icons = {
-  css: require("../assets/logos-tech/css.svg").default,
-  html: require("../assets/logos-tech/html.svg").default,
-  js: require("../assets/logos-tech/javascript.svg").default,
-  react: require("../assets/logos-tech/react.svg").default,
-  mongo: require("../assets/logos-tech/mongo.svg").default,
-  git: require("../assets/logos-tech/git.svg").default,
-  github: require("../assets/logos-tech/github-b.svg").default,
-  github2: require("../assets/logos-tech/github-w.svg").default,
-  postgres: require("../assets/logos-tech/postgres.svg").default,
-  python: require("../assets/logos-tech/python.svg").default,
-  docker: require("../assets/logos-tech/docker.svg").default,
-  typescript: require("../assets/logos-tech/typescript.svg").default,
-  tailwind: require("../assets/logos-tech/tailwind.svg").default,
-  java: require("../assets/logos-tech/java.svg").default,
-  spring: require("../assets/logos-tech/spring.svg").default,
-  django: require("../assets/logos-tech/django.svg").default,
-  figma: require("../assets/logos-tech/figma.svg").default,
-  vscode: require("../assets/logos-tech/vscode.svg").default,
-};
+// Import all icons directly
+import css from "../assets/logos-tech/css.svg";
+import html from "../assets/logos-tech/html.svg";
+import js from "../assets/logos-tech/javascript.svg";
+import react from "../assets/logos-tech/react.svg";
+import mongo from "../assets/logos-tech/mongo.svg";
+import git from "../assets/logos-tech/git.svg";
+import githubB from "../assets/logos-tech/github-b.svg";
+import githubW from "../assets/logos-tech/github-w.svg";
+import postgres from "../assets/logos-tech/postgres.svg";
+import python from "../assets/logos-tech/python.svg";
+import docker from "../assets/logos-tech/docker.svg";
+import typescript from "../assets/logos-tech/typescript.svg";
+import tailwind from "../assets/logos-tech/tailwind.svg";
+import java from "../assets/logos-tech/java.svg";
+import spring from "../assets/logos-tech/spring.svg";
+import django from "../assets/logos-tech/django.svg";
+import figma from "../assets/logos-tech/figma.svg";
+import vscode from "../assets/logos-tech/vscode.svg";
 
 const hoverVariants = {
   hover: {
@@ -31,7 +29,7 @@ const hoverVariants = {
   }
 };
 
-const MotionTechIcon = ({ src, alt, title, darkMode }) => (
+const MotionTechIcon = ({ src, alt, title }) => (
   <motion.div 
     variants={hoverVariants}
     whileHover="hover"
@@ -52,7 +50,6 @@ const TechCategory = ({ title, icons, darkMode }) => (
           src={icon}
           alt={alt}
           title={alt}
-          darkMode={darkMode}
         />
       ))}
     </div>
@@ -64,33 +61,33 @@ const Technologies = forwardRef(({ darkMode }, ref) => {
     {
       title: "Backend",
       icons: [
-        [icons.python, "Python"],
-        [icons.django, "Django"],
-        [icons.java, "Java"],
-        [icons.spring, "Spring"],
-        [icons.mongo, "MongoDB"],
-        [icons.postgres, "PostgreSQL"]
+        [python, "Python"],
+        [django, "Django"],
+        [java, "Java"],
+        [spring, "Spring"],
+        [mongo, "MongoDB"],
+        [postgres, "PostgreSQL"]
       ]
     },
     {
       title: "Frontend",
       icons: [
-        [icons.react, "React"],
-        [icons.js, "JavaScript"],
-        [icons.typescript, "TypeScript"],
-        [icons.html, "HTML5"],
-        [icons.css, "CSS3"],
-        [icons.tailwind, "Tailwind"]
+        [react, "React"],
+        [js, "JavaScript"],
+        [typescript, "TypeScript"],
+        [html, "HTML5"],
+        [css, "CSS3"],
+        [tailwind, "Tailwind"]
       ]
     },
     {
       title: "Environment & Tools",
       icons: [
-        [icons.git, "Git"],
-        [darkMode ? icons.github2 : icons.github, "GitHub"],
-        [icons.docker, "Docker"],
-        [icons.figma, "Figma"],
-        [icons.vscode, "VSCode"]
+        [git, "Git"],
+        [darkMode ? githubW : githubB, "GitHub"],
+        [docker, "Docker"],
+        [figma, "Figma"],
+        [vscode, "VSCode"]
       ]
     }
   ];

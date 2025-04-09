@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import { motion } from 'framer-motion';
 import '../pages/styles/layout.css';
 
-// Import all icons at once
+// Importaciones de iconos 
 const icons = {
   css: require("../assets/logos-tech/css.svg").default,
   html: require("../assets/logos-tech/html.svg").default,

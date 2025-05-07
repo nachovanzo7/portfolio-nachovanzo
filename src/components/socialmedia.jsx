@@ -7,6 +7,7 @@ import gmail from '../assets/logos-tech/gmail-b.svg';
 import gmailw from '../assets/logos-tech/gmail.svg';
 import '../pages/styles/layout.css';
 import { motion } from 'framer-motion';
+import { NowPlaying } from "./NowPlaying";
 
 const SocialMedia = (({ darkMode } ) => {
     return (
@@ -17,6 +18,7 @@ const SocialMedia = (({ darkMode } ) => {
             <motion.a whileHover={{ scale: 1.1 }} href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=nachovanzo17@gmail.com&su=&body=" target="_blank" style={{marginLeft: '9px'}}><img src={darkMode ? gmailw : gmail} alt="Gmail" /></motion.a>
         </div>
         </div>
+        
     );
 });
 

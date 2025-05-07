@@ -80,6 +80,20 @@
   transition: all 0.2s ease;
 }
 
+.now-playing-wrapper {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 10;
+}
+
+@media (max-width: 1025px) {
+  .now-playing-wrapper {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 .projects {
     display: flex;
     flex-direction: column;
@@ -148,14 +162,10 @@
     color: orange;
   }
   
- 
-  
   .tech-icons img:hover {
     transform: scale(1.1);
   }
 
-  
-  
   .technologies-section {
     padding: 2rem;
   }
@@ -174,9 +184,7 @@
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
     border: 2px solid #ccc;
-  
   }
 
   .backend h4, .frontend h4, .env-tools h4 {
@@ -293,13 +301,17 @@
     padding-top: 40px;
   }
 
-  
-
   @media (max-width: 1025px) {
     .dock {
       width: 100%;
       border-radius: 0;
       padding: 0 10px;
+    }
+
+    .now-playing-container {
+      right: 10px;
+      bottom: 80px;
+      max-width: calc(100% - 20px);
     }
 
     .section-left {
@@ -340,7 +352,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
     }
     
     .home-image {
@@ -366,21 +377,21 @@
     }
     
     .backend, 
-  .frontend, 
-  .env-tools {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
-  }
+    .frontend, 
+    .env-tools {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      width: 100%;
+    }
 
-  .backend h4, 
-  .frontend h4, 
-  .env-tools h4 {
-    width: 100%;
-    text-align: center;
-  }
+    .backend h4, 
+    .frontend h4, 
+    .env-tools h4 {
+      width: 100%;
+      text-align: center;
+    }
     
     .tech-icons {
       display: flex !important;
@@ -403,7 +414,6 @@
       margin-bottom: 40px;
     }
     
-
     .bio-container h3 {
       display: flex;
       justify-content: center;
@@ -563,3 +573,5 @@
       flex-direction: column !important;
     }
   }
+
+  

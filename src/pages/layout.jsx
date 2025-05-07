@@ -1,11 +1,9 @@
-// src/App.jsx
 import React, { useRef, useState, useEffect } from "react";
 import Dock from "../components/Dock.jsx";
 import {
   BriefcaseBusiness,
   Code,
   CircleUserRound,
-  Settings,
   Moon,
   Sun,
   Shell,
@@ -15,12 +13,14 @@ import "./styles/layout.css";
 import ClickSpark from "../components/ClickSpark";
 import profileImage from "../assets/profile.jpg";
 import { TypeAnimation } from "react-type-animation";
-import SocialMedia from '../components/socialmedia.jsx'
+import SocialMedia from "../components/socialmedia.jsx";
+import { NowPlaying } from "../components/NowPlaying";
 
 const Layout = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [sidebarWidth, setSidebarWidth] = useState(700);
-  const [animationKey, setAnimationKey] = useState(0); // Key para forzar reinicio
+  const [animationKey, setAnimationKey] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false); // Nuevo estado para controlar la animación
   const scrollableRef = useRef(null);
 
   const homeRef = useRef(null);
@@ -41,6 +41,10 @@ const Layout = () => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+  };
+
+  const handleNowPlayingUpdate = (playingStatus) => {
+    setIsPlaying(playingStatus);
   };
 
   const items = [
@@ -68,9 +72,9 @@ const Layout = () => {
     },
     {
       icon: darkMode ? (
-        <Moon size={18} color={darkMode ? "#ffff" : "black"} />
+        <Moon size={18} color="white" />
       ) : (
-        <Sun size={18} color={darkMode ? "#ffff" : "black"} />
+        <Sun size={18} color="black" />
       ),
       label: "Theme",
       onClick: toggleDarkMode,
@@ -108,9 +112,7 @@ const Layout = () => {
           fontFamily: "Quicksand",
         }}
       >
-        <div
-          style={{ display: "flex", height: "100%", justifyContent: "center" }}
-        >
+        <div style={{ display: "flex", height: "100%", justifyContent: "center" }}>
           <div
             className="section-left"
             ref={scrollableRef}
@@ -137,11 +139,15 @@ const Layout = () => {
               borderLeft: darkMode ? "#888 solid 0.5px" : "#ddd solid 0.5px",
             }}
           >
-            
-            <div className="div-image">
-
-            
-
+            <div
+              className="div-image"
+              style={{
+                position: "relative",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <img
                 src={profileImage}
                 alt="Profile"
@@ -158,7 +164,7 @@ const Layout = () => {
                   margin: "20px",
                 }}
               />
-
+              
               <TypeAnimation
                 key={animationKey}
                 sequence={[
@@ -185,10 +191,13 @@ const Layout = () => {
                 cursorStyle={darkMode ? "|" : "_"}
               />
 
-              <SocialMedia darkMode={darkMode}/>
+              <SocialMedia darkMode={darkMode} />
 
             </div>
           </div>
+          <div className="now-playing-wrapper">
+                <NowPlaying />
+              </div>
         </div>
         <div className="dock">
           <Dock

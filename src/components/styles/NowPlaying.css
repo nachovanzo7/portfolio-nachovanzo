@@ -27,8 +27,8 @@
   
   .vinyl-wrapper {
     position: relative;
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     flex-shrink: 0;
   }
   
@@ -62,7 +62,7 @@
   }
   
   .now-playing-track {
-    font-size: 13px;
+    font-size: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -78,7 +78,7 @@
   }
   
   .now-playing-container:hover .vinyl {
-    transform: scale(1.1);
+    transform: scale(0.5);
   }
   
   @keyframes pulse-glow {
